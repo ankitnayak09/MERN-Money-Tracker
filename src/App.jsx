@@ -33,11 +33,11 @@ function App() {
 			}),
 		})
 			.then((res) => res.json())
-			.then((json) => {
+			.then(() => {
 				setName("");
 				setDatetime("");
 				setDescription("");
-				console.log(json);
+				window.location.reload();
 			});
 	}
 
@@ -47,7 +47,6 @@ function App() {
 	});
 
 	balance = balance.toFixed(2);
-	console.log(balance);
 	const fraction = balance.split(".")[1];
 	balance = balance.split(".")[0];
 
