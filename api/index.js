@@ -28,4 +28,6 @@ app.get("/api/transactions", async (req, res) => {
 	const transactions = await Transaction.find();
 	res.json(transactions);
 });
-app.listen(4000, () => console.log("Server Listening on PORT: 4000"));
+app.listen(process.env.PORT || 4000, () =>
+	console.log("Server Listening on PORT: 4000")
+);
