@@ -13,13 +13,16 @@ function App() {
 
 	async function getTransactions() {
 		const response = await fetch(
-			"http://localhost:4000/api" + "/transactions"
+			"https://mern-money-tracker-production.up.railway.app/api" +
+				"/transactions"
 		);
 		return await response.json();
 	}
 	function addNewTransaction(e) {
 		e.preventDefault();
-		const url = "http://localhost:4000/api" + "/transaction";
+		const url =
+			"https://mern-money-tracker-production.up.railway.app/api" +
+			"/transaction";
 
 		const price = name.split(" ")[0];
 		fetch(url, {
